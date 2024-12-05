@@ -1,0 +1,22 @@
+# Node.js dependencies
+node_modules/
+
+# Cypress output directories
+cypress/screenshots/
+cypress/videos/
+cypress/results/
+.cypress/
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# Environment variables
+.env
+
+# Debug logs
+npm-debug.log*
+yarn-error.log*
+
+# Mac system files
+.DS_Store
