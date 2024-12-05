@@ -39,14 +39,14 @@ For Headless Mode:
 
 To run the tests in headless mode (without a graphical user interface), use the following command:
 
-docker run --rm -it my-cypress-project
+|docker run --rm -it my-cypress-project
 
 This command will run the tests using Cypress inside the container, and once the tests are finished, the container will be automatically removed (--rm).
 For UI Mode (Graphical Interface):
 
 If you want to run Cypress with a graphical interface (UI), use the following command. Note that this option requires setting up X11 forwarding to display the UI on your local machine:
 
-docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix my-cypress-project
+|docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix my-cypress-project
 
 This will launch Cypress in UI mode, allowing you to interact with the tests through the graphical interface.
 
@@ -90,7 +90,6 @@ Need Help?
 If you encounter any issues or need help, feel free to open an issue or contact us!
 
 ### Summary
-
     Clone the repository from GitHub.
     Build the Docker image using docker build.
     Run the container for testing with docker run.
