@@ -79,11 +79,11 @@ If you need to change or update the tests, simply edit the relevant files inside
 
 To stop a running container, use the following command:
 
-docker stop <container_id>
+    docker stop <container_id>
 
 You can find the <container_id> by running:
 
-docker ps
+    docker ps
 
 Need Help?
 
