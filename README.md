@@ -95,4 +95,4 @@ If you encounter any issues or need help, feel free to open an issue or contact 
 * Run the container for testing with docker run.
 * For the graphical interface, use X11 forwarding.
 
-That's it! You now have clear instructions to run Cypress tests using Docker. If you have any additional questions, feel free to ask! 😊
+That's it! You now have clear instructions to run Cypress tests using Docker! 😊
