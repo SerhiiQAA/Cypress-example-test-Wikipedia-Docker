@@ -14,7 +14,7 @@ describe('Wikipedia tests', () => {
   it('should navigate to French Wikipedia and verify heading', () => {
     cy.get('#js-link-box-fr > strong').click();
     cy.url().should('include', 'fr.wikipedia.org');
-    cy.get('#firstHeading').should('have.text', 'Bienvenue sur WikipédiaZ');
+    cy.get('#firstHeading').should('have.text', 'Bienvenue sur Wikipédia');
   });
 
 });
