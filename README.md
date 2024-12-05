@@ -2,9 +2,6 @@
 
 This project uses Cypress for automated testing, and you can run the tests on your computer using Docker.
 
-![Cypress Example](images/WikiTests.png)
-
-
 # Cypress Tests with Docker
 
 This project contains automated tests using Cypress and Docker. You can clone this repository, build the Docker image, and run the tests inside a Docker container.
