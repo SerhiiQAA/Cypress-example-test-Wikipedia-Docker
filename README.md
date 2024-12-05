@@ -18,7 +18,7 @@ First, you need to clone this repository to your local machine.
 
     Open your terminal and run the following command to clone the repo:
 
-git clone https://github.com/username/repository-name.git
+`git clone https://github.com/username/repository-name.git`
 
 Navigate to the cloned repository directory:
 
@@ -39,14 +39,14 @@ For Headless Mode:
 
 To run the tests in headless mode (without a graphical user interface), use the following command:
 
-|docker run --rm -it my-cypress-project
+docker run --rm -it my-cypress-project
 
 This command will run the tests using Cypress inside the container, and once the tests are finished, the container will be automatically removed (--rm).
 For UI Mode (Graphical Interface):
 
 If you want to run Cypress with a graphical interface (UI), use the following command. Note that this option requires setting up X11 forwarding to display the UI on your local machine:
 
-|docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix my-cypress-project
+docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix my-cypress-project
 
 This will launch Cypress in UI mode, allowing you to interact with the tests through the graphical interface.
 
