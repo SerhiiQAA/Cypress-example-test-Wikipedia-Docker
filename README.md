@@ -18,7 +18,7 @@ First, you need to clone this repository to your local machine.
 
     Open your terminal and run the following command to clone the repo:
 
-`git clone https://github.com/username/repository-name.git`
+    git clone https://github.com/username/repository-name.git
 
 Navigate to the cloned repository directory:
 
@@ -28,7 +28,7 @@ Navigate to the cloned repository directory:
 
 This project includes a Dockerfile that will automatically set up the environment to run Cypress tests. To build the Docker image, run the following command in your terminal:
 
-docker build -t my-cypress-project .
+    docker build -t my-cypress-project .
 
 This command will build the image based on the Dockerfile in the root directory of the project. After a successful build, you will have a new Docker image named my-cypress-project.
 
@@ -39,14 +39,14 @@ For Headless Mode:
 
 To run the tests in headless mode (without a graphical user interface), use the following command:
 
-docker run --rm -it my-cypress-project
+    docker run --rm -it my-cypress-project
 
 This command will run the tests using Cypress inside the container, and once the tests are finished, the container will be automatically removed (--rm).
 For UI Mode (Graphical Interface):
 
 If you want to run Cypress with a graphical interface (UI), use the following command. Note that this option requires setting up X11 forwarding to display the UI on your local machine:
 
-docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix my-cypress-project
+    docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix my-cypress-project
 
 This will launch Cypress in UI mode, allowing you to interact with the tests through the graphical interface.
 
@@ -58,18 +58,18 @@ After running the tests, the results will be displayed in the terminal (for head
 
 If you want to automate the startup of multiple services or pass specific parameters, you can use docker-compose.yml. Create the file with the following content:
 
-version: '3'
-services:
-  cypress:
-    image: my-cypress-project
-    volumes:
-      - .:/app
-    environment:
-      - DISPLAY=:0
+    version: '3'
+    services:
+    cypress:
+        image: my-cypress-project
+        volumes:
+        - .:/app
+        environment:
+        - DISPLAY=:0
 
 Now you can start the container with:
 
-docker-compose up
+    docker-compose up
 
 6. Updating Tests
 
@@ -90,9 +90,9 @@ Need Help?
 If you encounter any issues or need help, feel free to open an issue or contact us!
 
 ### Summary
-    Clone the repository from GitHub.
-    Build the Docker image using docker build.
-    Run the container for testing with docker run.
-    For the graphical interface, use X11 forwarding.
+* Clone the repository from GitHub.
+* Build the Docker image using docker build.
+* Run the container for testing with docker run.
+* For the graphical interface, use X11 forwarding.
 
 That's it! You now have clear instructions to run Cypress tests using Docker. If you have any additional questions, feel free to ask! 😊
