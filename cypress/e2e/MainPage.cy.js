@@ -1,22 +1,42 @@
-describe('Wikipedia tests', () => {
-  
+// cypress/e2e/wikipediaTests.cy.js
+
+import WikipediaHomePage from '../pages/wikipediaHomePage';
+import WikipediaFrenchPage from '../pages/wikipediaFrenchPage';
+
+describe('Wikipedia Tests', () => {
+  const homePage = new WikipediaHomePage();
+  const frenchPage = new WikipediaFrenchPage();
+
   beforeEach(() => {
-    cy.visit('/');  
+    homePage.visit();
   });
 
-  it('should load the main page and verify elements', () => {
-    cy.location('protocol').should('eq', 'https:');
-    cy.title().should('eq', 'Wikipedia');
-    cy.get('.central-textlogo__image').should('be.visible');
-    cy.get('#js-link-box-fr > strong').should('be.visible');
+  it('Verify main page loads and basic elements', () => {
+    homePage.verifyProtocol();
+    homePage.verifyTitle();
+    homePage.verifyMainLogoVisibility();
+    homePage.verifyFrenchLink();
   });
 
-  it('should navigate to French Wikipedia and verify heading', () => {
-    cy.get('#js-link-box-fr > strong').click();
-    cy.url().should('include', 'fr.wikipedia.org');
-    cy.get('#firstHeading').should('have.text', 'Bienvenue sur Wikipédia');
+  it('Verify navigation to French Wikipedia and check content', () => {
+    homePage.goToFrenchPage();
+    frenchPage.verifyHeading();
+    frenchPage.verifyContentLoaded();
   });
 
+  it('Verify search functionality on main page', () => {
+    homePage.verifySearchFunctionality('Cypress');
+  });
+
+  it('Verify navigation menu on French Wikipedia', () => {
+    frenchPage.verifyNavigationMenu();
+  });
+
+  it('Verify footer link on French Wikipedia', () => {
+    frenchPage.verifyFooterLink();
+  });
+
+  it('Verify page search results on French Wikipedia', () => {
+    frenchPage.verifyPageInSearchResults('Cypress');
+  });
 });
-
-
