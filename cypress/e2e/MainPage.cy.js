@@ -1,7 +1,7 @@
 describe('Wikipedia tests', () => {
   
   beforeEach(() => {
-    cy.visit('/');  // використовуємо лише відносний шлях
+    cy.visit('/');  
   });
 
   it('should load the main page and verify elements', () => {
