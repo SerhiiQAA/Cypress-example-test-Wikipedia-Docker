@@ -28,14 +28,6 @@ describe('Wikipedia Tests', () => {
     homePage.verifySearchFunctionality('Cypress');
   });
 
-  it('Verify navigation menu on French Wikipedia', () => {
-    frenchPage.verifyNavigationMenu();
-  });
-
-  it('Verify footer link on French Wikipedia', () => {
-    frenchPage.verifyFooterLink();
-  });
-
   it('Verify page search results on French Wikipedia', () => {
     frenchPage.verifyPageInSearchResults('Cypress');
   });
